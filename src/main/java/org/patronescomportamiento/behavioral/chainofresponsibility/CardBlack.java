@@ -1,15 +1,15 @@
 package org.patronescomportamiento.behavioral.chainofresponsibility;
 
-public class CardBlack implements ApproveLoanChain{
+public class CardBlack implements IApproveLoanChain {
 
-    private ApproveLoanChain next;
+    private IApproveLoanChain next;
     @Override
-    public void setNext(ApproveLoanChain loan) {
+    public void setNext(IApproveLoanChain loan) {
         next = loan;
     }
 
     @Override
-    public ApproveLoanChain getNext() {
+    public IApproveLoanChain getNext() {
         return next;
     }
 
